@@ -69,6 +69,7 @@ class ToysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def toy_params
+      puts "The parameters: =>#{params}<="
       params.require(:toy).permit(:name, :description, :manufacturer)
     end
 end
